@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: white;
+    font: 16px/28px;
+    font-family: "Be Vietnam Pro", sans-serif;
+    background-color: black;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+button {
+    display: block;
+    border: none;
+    background-color: transparent;
+    font: inherit;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.title__section {
+    margin-bottom: 40px;
+    font-size: 52px;
+    line-height: 64px;
+    letter-spacing: 0.6px;
+    text-align: center;
+}
+
+/*HEADER*/
+#header__section {
+    padding: 40px 0 107px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+}
+
+.header__logo-img {
+    width: 48px;
+    height: 48px;
+}
+
+.nav__main {
+    margin-left: auto;
+}
+
+.nav__main-list {
+    display: flex;
+    gap: 48px;
+    margin-right: 72px;
+}
+
+.nav__main-link:hover {
+    color: #EE8313;
+}
+
+.btn__primary {
+    padding: 12px 24px;
+    font-weight: 600;
+    background-color: #EE8313;
+}
+
+.btn__primary:hover {
+    background-color: #EF5E10;
+}
+
+/* BANNER */
+#banner__section {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 60px;
+}
+
+.banner {
+    max-width: 475px;
+    padding-top: 45px;
+}
+
+.banner__header {
+    font-size: 52px;
+    line-height: 64px;
+    letter-spacing: 0.6px;
+}
+
+.banner__text {
+    margin: 32px 0 48px;
+    font-size: 17px;
+    opacity: 0.8;
+}
+
+.banner__links-wrap {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    margin-bottom: 40px;
+}
+
+.btn__secondary {
+    padding: 12px 24px;
+    font-weight: 600;
+    color: #EE8313;
+    border: 1px solid #EE8313;
+    line-height: 18px;
+}
+
+.banner__features-text {
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.banner__features-text:first-child {
+    margin-right: 40px;
+}
+
+.banner__features-text-strong {
+    margin-right: 16px;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 52px;
+    vertical-align: sub;
+}
+
+.banner__img {
+    position: absolute;
+    width: 53%;
+    height: 100%;
+    top: 0;
+    right: 0;
+}
+
+.banner__img::before {
+    position: absolute;
+    content: '';
+    z-index: 2;
+    width: 96%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: url("../img/ford-mustang-coupe.png");
+    background-repeat: no-repeat;
+}
+
+.banner__img::after {
+    position: absolute;
+    content: '';
+    z-index: 1;
+    top: 0;
+    right: 0;
+    width: 75%;
+    height: 100%;
+    background-color: rgb(52 52 52 / 30%);
+}
+
+#rent__section {
+    padding: 120px 0 120px;
+}
+
+.rent__wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+.rent {
+    position: relative;
+    height: 524px;
+    font-weight: 600;
+    background: url("../img/ferrari-supercars.png") 50%/cover no-repeat;
+}
+
+.rent:nth-child(2) {
+    background-image: url("../img/aston-martin.png");
+}
+
+.rent:nth-child(3) {
+    background-image: url("../img/jaguar-suv.png");
+}
+
+.rent:nth-child(4) {
+    background-image: url("../img/porsche-supersuv.png");
+}
+
+.rent__name {
+    position: absolute;
+    top: 48px;
+    left: 48px;
+    font-size: 40px;
+    letter-spacing: 0.6px;
+}
+
+.rent__link {
+    position: absolute;
+    bottom: 48px;
+    right: 60px;
+    font-size: 24px;
+    letter-spacing: 0.6px;
+    padding-right: 30px;
+}
+
+.rent__link:hover {
+    color: #FFCC2C;
+}
+
+.rent__link::after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    right: 0;
+    width: 8px;
+    height: 16px;
+    background: url("../img/Vector.svg") 50%/cover no-repeat;
+    transform: translateY(-50%);
+}
+
+#services__section {
+    padding-bottom: 120px;
+}
+
+.services__section-title {
+    margin-bottom: 66px;
+    text-align: left;
+}
+
+.services__wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.services__img {
+    margin-bottom: 24px;
+}
+
+.services__title {
+    margin-bottom: 16px;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.services__text {
+    opacity: 0.8;
+}
+
+#destination__section {
+    padding-bottom: 162px;
+}
+
+.destination__section-title {
+    width: 590px;
+    margin: 0 auto 40px;
+}
+
+.destination__wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.destination {
+    border: 1px solid #171717;
+    background-color: #171717;
+}
+
+.destination__info {
+    padding: 24px;
+}
+
+.destination__title {
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.destination__text {
+    margin: 10px 0 25px;
+    opacity: 0.8;
+}
+
+.destination__price {
+    position: relative;
+    display: block;
+    font-weight: 600;
+    padding-left: 42px;
+    margin-bottom: 17px;
+}
+
+.destination__price::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background: url("../img/car_icon.svg") no-repeat;
+    transform: translateY(-50%);
+}
+
+.destination__link {
+    color: #EE8313;
+}
+
+.destination__link:hover {
+    color: #EF5E10;
+}
+
+#location__section {
+    padding-bottom: 102px;
+}
+
+#footer__section {
+    padding-top: 40px;
+    background-color: #1F1905;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 55px;
+}
+
+.footer__logo-wrap {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    margin-bottom: 64px;
+    font-weight: 600;
+}
+
+.footer__about-text {
+    max-width: 235px;
+    font-size: 18px;
+    line-height: 32px;
+}
+
+.footer__nav-wrap {
+    display: flex;
+    justify-content: space-between;
+    gap: 45px;
+    margin: 40px 100px 0 auto;
+}
+
+.footer__nav-header {
+    margin-bottom: 32px;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.footer__nav-item {
+    margin-bottom: 28px;
+    line-height: 20px;
+}
+
+.footer__nav-link:hover {
+    color: #ee8313;
+}
+
+.footer__social {
+    margin-top: 32px;
+}
+
+.footer__social-link {
+    display: block;
+    width: 120px;
+    height: 30px;
+    margin-bottom: 45px;
+    background: url("../img/facebook.png") 50%/cover no-repeat;
+}
+
+.footer__social-link:nth-child(2) {
+    background: url("../img/instagram.png") 50%/cover no-repeat;
+}
+
+.footer__social-link:nth-child(3) {
+    background: url("../img/youtube.png") 50%/cover no-repeat;
+    margin-bottom: 0;
+}
+
+.footer__copyright {
+    background-color: #EE8313;
+    padding: 20px 0;
+}
+
+.footer__copyright-text {
+    text-align: center;
+}
