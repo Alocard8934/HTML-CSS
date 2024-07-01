@@ -1,0 +1,58 @@
+.nav__list {
+    align-self: center;
+    justify-self: center;
+    font-weight: 500;
+    font-size: 18px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 65px;
+    list-style-type: none;
+
+    @include tablet(){
+        display: none;
+    }
+}
+
+.nav__list-item {
+    position: relative;
+    padding-bottom: 10px;
+
+}
+
+.nav__list-link {
+    transition: opacity 0.2s ease-in;
+
+    &:hover {
+        opacity: 0.7;
+    }
+
+    &--dropdown {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        &::after {
+            content: url("./../../img/icons/eva_arrow-ios-back-outline.svg");
+            height: 18px;
+        }
+    }
+}
+
+.nav__list-sub-nav {
+    opacity: 0;
+    width: 180px;
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    top: calc(100%);
+    transform: translate(0%, 10%);
+    transition: all 0.2S ease-in;
+}
+
+.nav__list-item:hover .nav__list-sub-nav {
+    pointer-events: all;
+    opacity: 1;
+    transform: translate(0%, 0%);
+}

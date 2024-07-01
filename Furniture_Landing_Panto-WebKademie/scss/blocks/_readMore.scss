@@ -1,0 +1,22 @@
+.read__more {
+    display: inline-flex;
+    gap: 13px;
+    align-items: center;
+    color: var(--accent);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.85;
+
+    &::after {
+        content: url("./../../img/icons/arrow_right.svg");
+        height: 21px;
+    }
+
+    &--large {
+        font-size: 18px;
+        
+        &::after{
+            height: 31px;
+        }
+    }
+}
