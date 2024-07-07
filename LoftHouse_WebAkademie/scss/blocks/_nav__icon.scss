@@ -1,0 +1,65 @@
+/* Nav Icon */
+.nav__icon-btn {
+    --time: 0.1s;
+    --width: 40px;
+    --height: 30px;
+    --line-height: 1px;
+    --line-margin: 2;
+    --color: #fff;
+
+    height: var(--height);
+    width: var(--width);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav__icon {
+    position: relative;
+    width: var(--width);
+    height: var(--line-height);
+    background-color: var(--color);
+}
+
+.nav__icon::before,
+.nav__icon::after {
+    content: '';
+    display: block;
+
+    position: absolute;
+    left: 0;
+
+    width: var(--width);
+    height: var(--line-height);
+
+    background-color: var(--color);
+    transition: transform var(--time) ease-in,
+        top var(--time) linear var(--time);
+}
+
+.nav__icon::before {
+    top: calc(var(--line-height) * -8);
+}
+
+.nav__icon::after {
+    top: calc(var(--line-height) * 8);
+}
+
+.nav__icon.nav__icon--active {
+    background-color: transparent;
+}
+
+.nav__icon.nav__icon--active::before,
+.nav__icon.nav__icon--active::after {
+    top: 0;
+    transition: top var(--time) linear,
+        transform var(--time) ease-in var(--time);
+}
+
+.nav__icon.nav__icon--active::before {
+    transform: rotate(45deg);
+}
+
+.nav__icon.nav__icon--active::after {
+    transform: rotate(-45deg);
+}
